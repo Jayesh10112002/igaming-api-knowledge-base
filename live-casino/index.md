@@ -9,3 +9,5 @@ articles:
     url: "/live-casino/live-casino-api-integration/"
     description: "Plan sessions, wallet callbacks, availability checks, and incident handling."
 ---
+
+Live casino adds real dealer tables and game shows to your lobby, which brings session, latency and availability considerations that a static catalogue does not. These guides walk through the session lifecycle, the wallet flow, dynamic availability and monitoring for live products.

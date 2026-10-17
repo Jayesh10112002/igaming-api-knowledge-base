@@ -1,0 +1,26 @@
+{%- assign logo_abs = site.logo | absolute_url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.betnex.co/#organization",
+      "name": "Betnex",
+      "url": "https://www.betnex.co/",
+      "logo": { "@type": "ImageObject", "url": "{{ logo_abs }}" },
+      "description": "Betnex is a B2B iGaming infrastructure and casino game aggregation provider — casino API, live casino, slots, sportsbook, wallet and turnkey solutions.",
+      "sameAs": [
+        "https://www.betnex.co/",
+        "https://casinoapi.betnex.co/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "{{ site.email }}",
+        "availableLanguage": ["English"]
+      }
+    }
+  ]
+}
+</script>

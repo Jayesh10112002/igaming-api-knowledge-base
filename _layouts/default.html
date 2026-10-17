@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  <meta name="theme-color" content="#f97316">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.betnex.co">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  {% include schema.html %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="container header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav aria-label="Main navigation">
-      <a href="{{ '/casino-api/' | relative_url }}">Casino API</a><a href="{{ '/slots-api/' | relative_url }}">Slots API</a><a href="{{ '/live-casino/' | relative_url }}">Live Casino</a><a href="{{ '/engineering/' | relative_url }}">Engineering</a><a href="{{ '/about/' | relative_url }}">About</a>
-    </nav>
-  </div></header>
+  {% include header.html %}
   <main id="main" class="container main-content">{{ content }}</main>
-  <footer class="site-footer"><div class="container footer-inner">
-    <p><strong>{{ site.title }}</strong> — technical education for iGaming teams.</p>
-    <p>Published by {{ site.site_owner }}. <a href="{{ site.betnex_url }}">Betnex</a> · <a href="{{ site.casino_api_url }}">Casino API platform</a></p>
-    <p class="small">Availability, provider access, and legal requirements vary by market and agreement. Verify before launch.</p>
-  </div></footer>
-</body></html>
+  {% include footer.html %}
+</body>
+</html>

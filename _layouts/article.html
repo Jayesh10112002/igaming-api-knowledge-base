@@ -1,4 +1,104 @@
 ---
 layout: default
 ---
-<article class="article"><header class="article-header"><p class="eyebrow">{{ page.category | default: "Guide" | escape }}</p><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.description | escape }}</p><p class="article-meta">By {{ site.site_owner }}{% if page.date %} · {{ page.date | date: "%B %-d, %Y" }}{% endif %}</p></header><div class="prose">{{ content }}</div><aside class="article-cta"><h2>Explore Betnex integration options</h2><p>For business and product information, visit the official Betnex website or API platform.</p><p><a href="{{ site.betnex_url }}">Betnex</a> · <a href="{{ site.casino_api_url }}">Casino API platform</a></p></aside><nav class="article-end" aria-label="Article navigation"><a href="{{ '/' | relative_url }}">← Back to knowledge base</a></nav></article>
+{%- assign cat_url = site.data.categories[page.category] -%}
+{%- assign pub = page.date | default: site.time -%}
+{%- assign mod = page.last_modified_at | default: pub -%}
+<div class="article-layout">
+  <article class="article">
+    {% include breadcrumbs.html %}
+    <header class="article-header">
+      <p class="eyebrow">{{ page.category | default: "Guide" | escape }}</p>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.description %}<p class="lede">{{ page.description | escape }}</p>{% endif %}
+      <p class="article-meta">
+        <span>By {{ site.site_owner }}</span>
+        <span aria-hidden="true">·</span>
+        <span>{{ pub | date: "%B %-d, %Y" }}</span>
+        <span aria-hidden="true">·</span>
+        <span data-reading-time></span>
+      </p>
+    </header>
+    <div class="prose" data-article-body>{{ content }}</div>
+    {% include cta.html %}
+    <nav class="article-end" aria-label="Article navigation">
+      <a href="{{ '/' | relative_url }}">← Back to knowledge base</a>
+    </nav>
+  </article>
+
+  <aside class="article-toc" aria-label="On this page">
+    <div class="toc-inner">
+      <p class="toc-title">On this page</p>
+      <nav data-toc></nav>
+    </div>
+  </aside>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": "{{ pub | date_to_xmlschema }}",
+  "dateModified": "{{ mod | date_to_xmlschema }}",
+  "inLanguage": "{{ site.lang }}",
+  "image": ["{{ '/assets/img/og.jpg' | absolute_url }}"],
+  "author": { "@type": "Organization", "name": "Betnex", "url": "https://www.betnex.co/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Betnex",
+    "logo": { "@type": "ImageObject", "url": "{{ site.logo | absolute_url }}" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" }{% if page.category and cat_url %},
+    { "@type": "ListItem", "position": 2, "name": {{ page.category | jsonify }}, "item": "{{ cat_url | absolute_url }}" },
+    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }{% else %},
+    { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }{% endif %}
+  ]
+}
+</script>
+
+<script>
+  (function () {
+    var body = document.querySelector("[data-article-body]");
+    if (!body) return;
+    var slug = function (s) {
+      return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60);
+    };
+    var heads = Array.prototype.slice.call(body.querySelectorAll("h2, h3"));
+    var toc = document.querySelector("[data-toc]");
+    if (toc && heads.length >= 3) {
+      heads.forEach(function (h) {
+        if (!h.id) h.id = slug(h.textContent) || "section";
+        var a = document.createElement("a");
+        a.href = "#" + h.id;
+        a.textContent = h.textContent;
+        if (h.tagName === "H3") a.className = "toc-h3";
+        toc.appendChild(a);
+      });
+      var links = Array.prototype.slice.call(toc.querySelectorAll("a"));
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            links.forEach(function (l) { l.classList.toggle("is-current", l.getAttribute("href") === "#" + en.target.id); });
+          });
+        }, { rootMargin: "-90px 0px -70% 0px", threshold: 0 });
+        heads.forEach(function (h) { io.observe(h); });
+      }
+    }
+    var rt = document.querySelector("[data-reading-time]");
+    if (rt) {
+      var words = (body.textContent || "").trim().split(/\s+/).length;
+      rt.textContent = Math.max(1, Math.round(words / 200)) + " min read";
+    }
+  })();
+</script>

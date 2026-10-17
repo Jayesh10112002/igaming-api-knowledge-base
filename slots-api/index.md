@@ -12,3 +12,5 @@ articles:
     url: "/slots-api/building-a-balanced-slots-portfolio/"
     description: "Evaluate game variety, discoverability, localization, and performance."
 ---
+
+A slots API gives players access to slot titles from one or more studios through your platform. These guides cover the components of a slots integration and how to plan a portfolio that serves a real market — variety, discovery, localization and performance — rather than chasing a single large number.

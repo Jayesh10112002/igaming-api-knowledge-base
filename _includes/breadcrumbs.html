@@ -1,0 +1,10 @@
+{%- assign cat_url = site.data.categories[page.category] -%}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {%- if page.category and cat_url %}
+    <li><a href="{{ cat_url | relative_url }}">{{ page.category }}</a></li>
+    {%- endif %}
+    <li aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>

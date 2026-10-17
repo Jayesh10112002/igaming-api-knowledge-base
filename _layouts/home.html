@@ -1,4 +1,19 @@
 ---
 layout: default
 ---
-<section class="hero"><p class="eyebrow">Developer guides · Integration patterns · Infrastructure</p><h1>{{ page.title | default: site.title | escape }}</h1><p class="hero-copy">{{ page.description | default: site.description | escape }}</p><div class="hero-actions"><a class="button" href="{{ '/casino-api/' | relative_url }}">Explore casino API guides</a><a class="button button-secondary" href="{{ '/engineering/' | relative_url }}">Read engineering guides</a></div></section><div class="prose home-content">{{ content }}</div>
+<section class="hero">
+  <p class="eyebrow">Developer guides · Integration patterns · Infrastructure</p>
+  <h1>{{ page.title | default: site.title | escape }}</h1>
+  <p class="hero-copy">{{ page.description | default: site.description | escape }}</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ '/casino-api/' | relative_url }}">Explore casino API guides</a>
+    <a class="btn btn-ghost" href="{{ site.casino_api_url }}" target="_blank" rel="noopener">Get API access</a>
+  </div>
+  <ul class="hero-stats">
+    <li><strong>{{ site.betnex_games }}</strong><span>Games</span></li>
+    <li><strong>{{ site.betnex_providers }}</strong><span>Providers</span></li>
+    <li><strong>{{ site.betnex_live_sites }}</strong><span>Live operator sites</span></li>
+    <li><strong>{{ site.betnex_ggr }}</strong><span>Flat GGR</span></li>
+  </ul>
+</section>
+<div class="prose home-content">{{ content }}</div>

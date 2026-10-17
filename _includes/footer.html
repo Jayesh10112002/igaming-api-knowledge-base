@@ -1,0 +1,51 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="footer-logo" href="{{ '/' | relative_url }}">Bet<span>nex</span> <span style="font-weight:500;color:#8794b0;font-size:1rem">Knowledge Base</span></a>
+      <p>Practical guides to casino API integration, slots, live casino, sportsbook and scalable iGaming infrastructure — maintained by the Betnex team.</p>
+      <div class="footer-stats">
+        <span>{{ site.betnex_games }} games</span>
+        <span>{{ site.betnex_providers }} providers</span>
+        <span>{{ site.betnex_live_sites }} live operator sites</span>
+        <span>{{ site.betnex_ggr }} flat GGR</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="{{ '/casino-api/' | relative_url }}">Casino API</a></li>
+        <li><a href="{{ '/slots-api/' | relative_url }}">Slots API</a></li>
+        <li><a href="{{ '/live-casino/' | relative_url }}">Live Casino</a></li>
+        <li><a href="{{ '/sportsbook/' | relative_url }}">Sportsbook</a></li>
+        <li><a href="{{ '/engineering/' | relative_url }}">Engineering</a></li>
+        <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Betnex</h3>
+      <ul>
+        <li><a href="{{ site.betnex_url }}" target="_blank" rel="noopener">Betnex website</a></li>
+        <li><a href="{{ site.casino_api_url }}" target="_blank" rel="noopener">Casino API platform</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About this publication</a></li>
+        <li><a href="{{ '/betnex/' | relative_url }}">Betnex services &amp; data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="{{ site.telegram_url }}" target="_blank" rel="noopener">Telegram sales</a></li>
+        <li><a href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="{{ site.docs_url }}" target="_blank" rel="noopener">API documentation</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="small">© {{ site.time | date: "%Y" }} Betnex. This knowledge base is educational content and not legal, financial or commercial advice. Game, provider, currency and market availability vary by agreement and jurisdiction — confirm details with Betnex before launch.</p>
+    <p class="small">18+ · B2B software for licensed operators only.</p>
+  </div>
+</footer>

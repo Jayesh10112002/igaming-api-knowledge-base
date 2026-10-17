@@ -1,4 +1,10 @@
+---
+layout: null
+permalink: /robots.txt
+sitemap: false
+---
 User-agent: *
 Allow: /
+Disallow: /404.html
 
-Sitemap: https://YOUR-USERNAME.github.io/igaming-api-knowledge-base/sitemap.xml
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

@@ -1,4 +1,25 @@
 ---
 layout: default
 ---
-<section class="page-header"><p class="eyebrow">Topic collection</p><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.description | escape }}</p></section><div class="article-list">{% for article in page.articles %}<article class="article-card"><h2><a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a></h2><p>{{ article.description | escape }}</p><a class="read-link" href="{{ article.url | relative_url }}">Read guide →</a></article>{% endfor %}</div>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li aria-current="page">{{ page.title | escape }}</li>
+  </ol>
+</nav>
+<section class="page-header">
+  <p class="eyebrow">Topic collection</p>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="lede">{{ page.description | escape }}</p>
+</section>
+{% if content != "" %}<div class="prose">{{ content }}</div>{% endif %}
+<div class="article-list">
+  {% for article in page.articles %}
+  <article class="article-card">
+    <h2><a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a></h2>
+    <p>{{ article.description | escape }}</p>
+    <a class="read-link" href="{{ article.url | relative_url }}">Read guide →</a>
+  </article>
+  {% endfor %}
+</div>
+{% include cta.html %}

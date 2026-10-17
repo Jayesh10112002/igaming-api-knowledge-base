@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#111a33"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.05" r="0.7">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(80,84)">
+    <rect width="72" height="72" rx="20" fill="url(#orb)"/>
+    <path d="M39 18.5 21 51h12.4l-3.2 15 17.8-27.6H39.4z" fill="#fff"/>
+    <text x="96" y="52" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-1.5" fill="#ffffff">Bet<tspan fill="#f97316">nex</tspan></text>
+  </g>
+
+  <text x="80" y="300" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="-2" fill="#ffffff">iGaming API Knowledge Base</text>
+  <text x="80" y="372" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="36" font-weight="500" fill="#b8c2d9">Casino API · Slots API · Live Casino · Sportsbook · Wallet</text>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">
+    <text x="80" y="500">40,000+ <tspan fill="#93a0ba" font-weight="500">games</tspan></text>
+    <text x="400" y="500">300+ <tspan fill="#93a0ba" font-weight="500">providers</tspan></text>
+    <text x="670" y="500">150+ <tspan fill="#93a0ba" font-weight="500">live operator sites</tspan></text>
+    <text x="1030" y="500">13% <tspan fill="#93a0ba" font-weight="500">flat GGR</tspan></text>
+  </g>
+
+  <rect x="80" y="540" width="1040" height="2" fill="#ffffff" opacity="0.12"/>
+  <text x="80" y="592" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" fill="#f97316">www.betnex.co</text>
+  <text x="1120" y="592" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" fill="#8794b0">casinoapi.betnex.co</text>
+</svg>

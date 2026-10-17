@@ -1,21 +1,99 @@
+# ---------------------------------------------------------------------------
+# Site identity
+# ---------------------------------------------------------------------------
 title: "iGaming API Knowledge Base"
-description: "Technical guides to casino APIs, slots APIs, live casino integrations, sportsbook technology, and iGaming infrastructure."
-url: "https://YOUR-USERNAME.github.io"
-baseurl: "/igaming-api-knowledge-base"
-lang: "en"
-timezone: "UTC"
+tagline: "Casino API, Slots API, Live Casino & Sportsbook integration guides"
+description: >-
+  Practical, developer-focused guides to casino API integration, slots APIs,
+  live casino, sportsbook technology and scalable iGaming infrastructure —
+  maintained by Betnex.
+lang: en
+timezone: UTC
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-site_owner: "Betnex Editorial Team"
+
+# ---------------------------------------------------------------------------
+# Canonical URL — CHANGE THESE TWO LINES WHEN THE DOMAIN CHANGES.
+# Option A (GitHub Pages, works today):
+#   url: "https://jayesh10112002.github.io"
+#   baseurl: "/igaming-api-knowledge-base"
+# Option B (custom domain, recommended for SEO) — set baseurl to "":
+#   url: "https://kb.betnex.co"
+#   baseurl: ""
+# ---------------------------------------------------------------------------
+url: "https://jayesh10112002.github.io"
+baseurl: "/igaming-api-knowledge-base"
+
+# ---------------------------------------------------------------------------
+# Publisher / author (E-E-A-T signals + jekyll-seo-tag)
+# ---------------------------------------------------------------------------
+author:
+  name: "Betnex"
+  url: "https://www.betnex.co/"
+site_owner: "Betnex"
+
+social:
+  name: Betnex
+  links:
+    - https://www.betnex.co/
+    - https://casinoapi.betnex.co/
+    - https://t.me/betnex_sales
+
+logo: /assets/img/logo.svg
+twitter:
+  card: summary_large_image
+  username: betnex
+
+# Add your Search Console / Bing verification codes here after deploy.
+# google_site_verification: "REPLACE_ME"
+# bing_site_verification: "REPLACE_ME"
+
+# ---------------------------------------------------------------------------
+# Betnex product facts — single source of truth used across the site.
+# Update here once and every layout/CTA follows.
+# ---------------------------------------------------------------------------
 betnex_url: "https://www.betnex.co/"
 casino_api_url: "https://casinoapi.betnex.co/"
+docs_url: "https://casinoapi.betnex.co/"
+telegram_url: "https://t.me/betnex_sales"
+support_url: "https://t.me/betnex_support"
+whatsapp_url: "https://wa.me/917877543411"
+email: "contact@betnex.co"
+
+betnex_games: "40,000+"
+betnex_providers: "300+"
+betnex_live_sites: "150+"
+betnex_integration: "24–72 hours"
+betnex_ggr: "13%"
+betnex_currencies: "INR, BDT, PKR, USD, EUR, USDT and more"
+
+# ---------------------------------------------------------------------------
+# Plugins & defaults
+# ---------------------------------------------------------------------------
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
-exclude: [README.md, Gemfile, Gemfile.lock, LICENSE, vendor, node_modules, .github]
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  posts_limit: 30
+
 defaults:
+  - scope: {path: ""}
+    values: {image: /assets/img/og.jpg}
   - scope: {path: "", type: "posts"}
     values: {layout: article}
   - scope: {path: "", type: "pages"}
     values: {layout: page}
+  - scope: {path: "", type: "articles"}
+    values: {layout: article}
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - vendor
+  - node_modules
+  - .github
