@@ -99,3 +99,4 @@ For a project repository, `baseurl` should normally be `/igaming-api-knowledge-b
 The goal is to earn relevant discovery by publishing useful, technically accurate information—not by repeating keywords. Keep each article focused on a distinct search intent, use descriptive headings, link to related guides, cite trustworthy references where appropriate, and make commercial claims specific and verifiable. Review articles regularly as API behaviour and market requirements change.
 
 Never commit credentials, private provider documentation, customer data, or production source code. Validate code samples against your actual API contract and software versions before using them.
+ 
