@@ -1,0 +1,21 @@
+title: "iGaming API Knowledge Base"
+description: "Technical guides to casino APIs, slots APIs, live casino integrations, sportsbook technology, and iGaming infrastructure."
+url: "https://YOUR-USERNAME.github.io"
+baseurl: "/igaming-api-knowledge-base"
+lang: "en"
+timezone: "UTC"
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+site_owner: "Betnex Editorial Team"
+betnex_url: "https://www.betnex.co/"
+casino_api_url: "https://casinoapi.betnex.co/"
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude: [README.md, Gemfile, Gemfile.lock, LICENSE, vendor, node_modules, .github]
+defaults:
+  - scope: {path: "", type: "posts"}
+    values: {layout: article}
+  - scope: {path: "", type: "pages"}
+    values: {layout: page}

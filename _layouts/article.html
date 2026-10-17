@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="article"><header class="article-header"><p class="eyebrow">{{ page.category | default: "Guide" | escape }}</p><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.description | escape }}</p><p class="article-meta">By {{ site.site_owner }}{% if page.date %} · {{ page.date | date: "%B %-d, %Y" }}{% endif %}</p></header><div class="prose">{{ content }}</div><aside class="article-cta"><h2>Explore Betnex integration options</h2><p>For business and product information, visit the official Betnex website or API platform.</p><p><a href="{{ site.betnex_url }}">Betnex</a> · <a href="{{ site.casino_api_url }}">Casino API platform</a></p></aside><nav class="article-end" aria-label="Article navigation"><a href="{{ '/' | relative_url }}">← Back to knowledge base</a></nav></article>
