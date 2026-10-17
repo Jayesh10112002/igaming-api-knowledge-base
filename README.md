@@ -32,14 +32,14 @@ That is three API calls plus one webhook, which is why most operators complete i
 
 ## Products behind the API
 
-| Product | What it gives you |
-|---|---|
-| **Casino API** | Launch and settle every game through one signed contract. |
-| **Casino API aggregator** | The full provider catalogue through a single connection. |
-| **Slots API** | Tens of thousands of slot titles from the major studios. |
-| **Live Casino API** | Real-time HD dealer tables, game shows and regional tables. |
-| **Sportsbook & Sports Data API** | Pre-match, in-play and iframe-style sportsbook products. |
-| **Casino Wallet API** | Seamless wallet with idempotent debit/credit callbacks. |
+| Product                          | What it gives you                                                        |
+| -------------------------------- | ------------------------------------------------------------------------ |
+| **Casino API**                   | Launch and settle every game through one signed contract.                |
+| **Casino API aggregator**        | The full provider catalogue through a single connection.                 |
+| **Slots API**                    | Tens of thousands of slot titles from the major studios.                 |
+| **Live Casino API**              | Real-time HD dealer tables, game shows and regional tables.              |
+| **Sportsbook & Sports Data API** | Pre-match, in-play and iframe-style sportsbook products.                 |
+| **Casino Wallet API**            | Seamless wallet with idempotent debit/credit callbacks.                  |
 | **White Label & Turnkey Casino** | A complete platform with back office, bonus, VIP and tournament engines. |
 
 ## Games and providers
@@ -84,5 +84,5 @@ Yes. You operate under your own gaming licence; which licence you need depends o
 
 - Explore the platform and request sandbox access at **[casinoapi.betnex.co](https://casinoapi.betnex.co/)**.
 - Learn more about Betnex at **[www.betnex.co](https://www.betnex.co/)**.
-- Contact sales: [contact@betnex.co](mailto:contact@betnex.co) · [Telegram](https://t.me/betnex_sales) · [WhatsApp](https://wa.me/917877543411).
+- Contact sales: [contact@betnex.co](mailto:contact@betnex.co) · [Telegram](https://t.me/sales_betnex) · [WhatsApp](https://wa.me/917877543411).
 - Read the integration guides in the Betnex [iGaming API Knowledge Base](https://jayesh10112002.github.io/igaming-api-knowledge-base/).

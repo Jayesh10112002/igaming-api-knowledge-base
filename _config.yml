@@ -38,7 +38,7 @@ social:
   links:
     - https://www.betnex.co/
     - https://casinoapi.betnex.co/
-    - https://t.me/betnex_sales
+    - https://t.me/sales_betnex
 
 logo: /assets/img/logo.svg
 twitter:
@@ -56,7 +56,7 @@ twitter:
 betnex_url: "https://www.betnex.co/"
 casino_api_url: "https://casinoapi.betnex.co/"
 docs_url: "https://casinoapi.betnex.co/"
-telegram_url: "https://t.me/betnex_sales"
+telegram_url: "https://t.me/sales_betnex"
 support_url: "https://t.me/betnex_support"
 whatsapp_url: "https://wa.me/917877543411"
 email: "contact@betnex.co"
@@ -80,14 +80,14 @@ feed:
   posts_limit: 30
 
 defaults:
-  - scope: {path: ""}
-    values: {image: /assets/img/og.jpg}
-  - scope: {path: "", type: "posts"}
-    values: {layout: article}
-  - scope: {path: "", type: "pages"}
-    values: {layout: page}
-  - scope: {path: "", type: "articles"}
-    values: {layout: article}
+  - scope: { path: "" }
+    values: { image: /assets/img/og.jpg }
+  - scope: { path: "", type: "posts" }
+    values: { layout: article }
+  - scope: { path: "", type: "pages" }
+    values: { layout: page }
+  - scope: { path: "", type: "articles" }
+    values: { layout: article }
 
 exclude:
   - README.md
