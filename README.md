@@ -1,66 +1,88 @@
-# iGaming API Knowledge Base
+# Betnex Casino API: One Integration for 40,000+ Games from 300+ Providers
 
-**Practical, developer-focused guides to casino API integration, slots APIs, live casino, sportsbook technology and scalable iGaming infrastructure — maintained by [Betnex](https://www.betnex.co/).**
+**Betnex** is a B2B iGaming infrastructure and casino game aggregation provider. The **Betnex Casino API** lets operators connect to **40,000+ games from 300+ providers** through a single integration and one unified seamless wallet — no per-studio builds, no fragmented wallet logic and no dozens of separate contracts.
 
-- **Website:** https://www.betnex.co/
-- **Casino API platform:** https://casinoapi.betnex.co/
-- **Games aggregated:** 40,000+ · **Providers:** 300+ · **Live operator sites:** 150+ · **Platform GGR:** flat 13%
+- **Website:** [www.betnex.co](https://www.betnex.co/)
+- **Casino API platform & documentation:** [casinoapi.betnex.co](https://casinoapi.betnex.co/)
+- **Already powering:** 150+ live operator sites
+- **Pricing:** flat 13% platform GGR
 
-This repository is a Jekyll site (GitHub Pages ready). It is educational content, not legal or commercial advice.
+Whether you run an existing online casino and want to expand your catalogue, or you are launching a new platform, the Betnex Casino API gives your team one contract, one wallet and one reporting layer for slots, live dealer, crash, fishing and sportsbook content.
 
-## Run locally
+## What is the Betnex Casino API?
 
-Requires Ruby and Bundler:
+The Betnex Casino API is the single technical interface between your platform and the full Betnex game catalogue. Your lobby reads the game list, opens games through a session and launch URL, and your wallet settles every round through signed callbacks. The same calls work for slots, live tables and crash games.
 
-```bash
-bundle install
-bundle exec jekyll serve
-```
+Integration is deliberately small:
 
-Open http://127.0.0.1:4000/igaming-api-knowledge-base/ in your browser.
+- **List games** — your lobby reads the catalogue for the studios enabled on your account.
+- **Launch a session** — request a session for the logged-in player and receive a launch URL.
+- **Settle the round** — your wallet handles signed debit/credit callbacks with idempotency keys.
 
-## Configure the canonical domain (do this before deploy)
+That is three API calls plus one webhook, which is why most operators complete integration and QA within **24–72 hours**.
 
-All canonical URLs, Open Graph tags and the sitemap are generated from two values in `_config.yml`. Set them to your real domain:
+## Why operators choose the Betnex Casino API
 
-```yaml
-# Option A — GitHub Pages (works out of the box)
-url: "https://jayesh10112002.github.io"
-baseurl: "/igaming-api-knowledge-base"
+- **One integration, one wallet.** Replace dozens of provider integrations with a single API and one settlement contract.
+- **40,000+ games from 300+ providers.** Slots, live casino, crash, fishing, lottery and sportsbook iframes under one account.
+- **Flat 13% platform GGR.** Transparent pricing with no hidden platform fees.
+- **Proven at scale.** 150+ live operator sites already run on the Betnex platform.
+- **Built for emerging and global markets.** INR, BDT, PKR, USD, EUR, USDT and more, with regional live tables.
+- **Developer-first.** Versioned REST API, HMAC-SHA256 signed requests, sandbox keys and reporting out of the box.
 
-# Option B — custom domain (recommended for SEO)
-url: "https://kb.betnex.co"
-baseurl: ""
-```
+## Products behind the API
 
-For a custom domain, also add a `CNAME` file at the repo root containing the domain (e.g. `kb.betnex.co`) and point DNS at GitHub Pages.
+| Product | What it gives you |
+|---|---|
+| **Casino API** | Launch and settle every game through one signed contract. |
+| **Casino API aggregator** | The full provider catalogue through a single connection. |
+| **Slots API** | Tens of thousands of slot titles from the major studios. |
+| **Live Casino API** | Real-time HD dealer tables, game shows and regional tables. |
+| **Sportsbook & Sports Data API** | Pre-match, in-play and iframe-style sportsbook products. |
+| **Casino Wallet API** | Seamless wallet with idempotent debit/credit callbacks. |
+| **White Label & Turnkey Casino** | A complete platform with back office, bonus, VIP and tournament engines. |
 
-Search Console / Bing verification codes go in `_config.yml` (`google_site_verification`, `bing_site_verification`).
+## Games and providers
 
-## Publish with GitHub Pages
+Betnex aggregates the studios operators ask for — including **Evolution, Pragmatic Play (slots and live), PG Soft, JILI, Ezugi, CQ9, Habanero, JDB, Spribe (Aviator), Saba Sports, Betby and 9Wicket** — alongside hundreds of other studios. Some providers integrate as lobbies through an iframe/transfer wallet, so the catalogue is delivered as one unified experience.
 
-1. Push to the `main` branch.
-2. In GitHub, open **Settings → Pages** and set the source to **GitHub Actions**.
-3. The included workflow (`.github/workflows/pages.yml`) builds and deploys the site.
-4. After the first deploy, verify the canonical URL, `robots.txt` and `sitemap.xml` on the live domain, then submit the sitemap in Google Search Console.
+## Pricing: flat 13% GGR
 
-## Where the content lives
+Betnex uses a simple, published model: **flat 13% platform GGR** on casino content, with no monthly platform fee and separate GGR security deposits held against GGR. That is well below the 20–35% NGR range typical of legacy aggregators — and there are no hidden fees layered on top.
 
-- `index.md` — home page.
-- `about.md`, `betnex.md` — publisher and Betnex services/data pages.
-- `casino-api/`, `slots-api/`, `live-casino/`, `sportsbook/`, `engineering/`, `resources/` — topic guides.
-- Each folder has an `index.md` category page plus one or more article pages.
+## Markets and currencies
 
-## Editing conventions
+The Betnex Casino API is built for operators across **India, Bangladesh, the UAE/Dubai and global markets**. Currency support includes **INR, BDT, PKR, THB, IDR, VND, PHP, USD, EUR, GBP, BRL, CAD, AUD** and crypto (**BTC, ETH, USDT**).
 
-- Keep one search intent per article; use descriptive `##` headings and internal links.
-- Article front matter: `layout: article`, `title`, `description`, `category`, `permalink`, `date`.
-- Update `last_modified_at` in an article's front matter when you materially change it.
-- Never commit credentials, private provider documentation, customer data or production source code.
+## Who the Betnex Casino API is for
 
-## SEO features included
+- **Online casino operators** expanding their game catalogue without rebuilding their wallet.
+- **Sportsbook operators** adding a casino vertical through the same integration.
+- **New platform launches** using the white-label or turnkey option on the same catalogue.
+- **Cricket exchange and fantasy products** that want casino and sports content together.
 
-- `jekyll-seo-tag` (titles, canonical, Open Graph, Twitter cards), `jekyll-sitemap`, `jekyll-feed`.
-- JSON-LD: Organization + WebSite sitewide; Article + BreadcrumbList on guides.
-- Per-article table of contents, reading time, breadcrumbs and semantic headings.
-- Accessible, responsive UI with a Betnex-branded design system (`assets/css/main.css`).
+Betnex supplies B2B software to licensed operators only and does not offer gambling to consumers. Provider access, currencies and market availability vary by agreement and jurisdiction.
+
+## Frequently asked questions
+
+**How long does Betnex Casino API integration take?**
+Most operators complete integration and QA within 24–72 hours using the documented REST endpoints, webhooks and client SDKs.
+
+**Which SDKs are available?**
+Node.js, PHP and Python SDKs are provided alongside the REST API and sandbox.
+
+**Is there a sandbox?**
+Yes — sandbox credentials are available on request so you can validate the launch flow and wallet callbacks before production.
+
+**What wallet models are supported?**
+Seamless (single wallet) and transfer wallet, with idempotency keys on every callback.
+
+**Do I need my own licence?**
+Yes. You operate under your own gaming licence; which licence you need depends on your target markets.
+
+## Get started with the Betnex Casino API
+
+- Explore the platform and request sandbox access at **[casinoapi.betnex.co](https://casinoapi.betnex.co/)**.
+- Learn more about Betnex at **[www.betnex.co](https://www.betnex.co/)**.
+- Contact sales: [contact@betnex.co](mailto:contact@betnex.co) · [Telegram](https://t.me/betnex_sales) · [WhatsApp](https://wa.me/917877543411).
+- Read the integration guides in the Betnex [iGaming API Knowledge Base](https://jayesh10112002.github.io/igaming-api-knowledge-base/).
